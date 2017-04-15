@@ -1,10 +1,9 @@
 package com.liwei.shiro.realm;
 
-import com.liwei.shiro.model.Resource;
-import com.liwei.shiro.model.User;
-import com.liwei.shiro.service.IUserService;
-import com.liwei.shiro.service.impl.UserService;
-import com.liwei.shiro.web.InitServlet;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -20,9 +19,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import com.liwei.shiro.model.Resource;
+import com.liwei.shiro.model.User;
+import com.liwei.shiro.service.IUserService;
 
 /**
  * Created by Liwei on 2016/9/19.

@@ -24,14 +24,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>initServlet</servlet-name>
-        <servlet-class>com.liwei.shiro.web.InitServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
 
 
-    <context-param>
+   
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
             classpath:spring/spring-service.xml,
@@ -39,10 +39,6 @@
             classpath:spring/spring-shiro.xml
         </param-value>
     </context-param>
-
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
 
     <!-- 添加 Shiro 相关配置(应该去官网查询相应的配置信息) -->

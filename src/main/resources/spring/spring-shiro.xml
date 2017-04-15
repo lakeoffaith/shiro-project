@@ -57,8 +57,24 @@
         <property name="filterChainDefinitions">
             <value>
                 /admin/**=authc,resourceCheckFilter
+                /phone/**=phone
                 /login=anon
             </value>
+        </property>
+        <property name="filters">
+        	<map>
+        		<entry key="phone">
+        			<bean class="com.liwei.shiro.filter.MobileTokenAuthentication">
+        			</bean>
+        			
+        		</entry>
+        		<entry key="authc">
+					<!-- <bean class="com.pets.shiro.filter.LoginAuthenticationFilter">
+					</bean> -->
+					<bean class="org.apache.shiro.web.filter.authc.FormAuthenticationFilter">
+					</bean>
+				</entry>
+        	</map>
         </property>
     </bean>
 
